@@ -1,12 +1,12 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect } from 'react'
-import { translations, Language } from './translations'
+import { translations, Language, TranslationKeys } from './translations'
 
 type LanguageContextType = {
   language: Language
   setLanguage: (lang: Language) => void
-  t: typeof translations.en
+  t: TranslationKeys
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
@@ -27,7 +27,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('language', lang)
   }
 
-  const t = translations[language]
+  const t = translations[language] as TranslationKeys
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
