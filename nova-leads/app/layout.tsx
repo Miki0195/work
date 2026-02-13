@@ -5,7 +5,6 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { CommandPalette } from "@/components/command-palette";
-import { OrganizationSchema, LocalBusinessSchema } from "@/components/seo/json-ld";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const inter = Inter({ 
@@ -83,14 +82,39 @@ export default function RootLayout({
   return (
     <html lang="hu" className="scroll-smooth">
       <body className={`${inter.variable} ${calSans.variable} font-sans antialiased bg-dark-950 text-dark-50`}>
-        <OrganizationSchema />
-        <LocalBusinessSchema />
         <Navbar />
         <main className="min-h-screen">
           {children}
         </main>
         <Footer />
         <CommandPalette />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: SITE_CONFIG.name,
+              description: SITE_CONFIG.description,
+              url: SITE_CONFIG.url,
+              email: SITE_CONFIG.contact.email,
+              telephone: SITE_CONFIG.contact.phone,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Váci utca 47.",
+                addressLocality: "Budapest",
+                postalCode: "1052",
+                addressCountry: "HU",
+              },
+              sameAs: [
+                SITE_CONFIG.links.linkedin,
+                SITE_CONFIG.links.twitter,
+                SITE_CONFIG.links.facebook,
+                SITE_CONFIG.links.instagram,
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );
