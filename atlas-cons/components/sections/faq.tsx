@@ -34,6 +34,7 @@ export function FAQ() {
             className="glass rounded-2xl overflow-hidden"
           >
             <button
+              type="button"
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
               className="w-full flex items-center justify-between p-6 text-left hover:bg-accent/50 transition-colors"
             >

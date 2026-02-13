@@ -72,6 +72,7 @@ export function Header({ onContactClick }: HeaderProps) {
             {navItems.map((item, index) => (
               <motion.button
                 key={item.href}
+                type="button"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -87,6 +88,7 @@ export function Header({ onContactClick }: HeaderProps) {
           <div className="flex items-center gap-3">
             {/* Language Toggle */}
             <motion.button
+              type="button"
               onClick={toggleLanguage}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -108,6 +110,7 @@ export function Header({ onContactClick }: HeaderProps) {
 
             {/* Theme Toggle */}
             <motion.button
+              type="button"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -137,6 +140,7 @@ export function Header({ onContactClick }: HeaderProps) {
 
             {/* Mobile Menu Toggle */}
             <button
+              type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors"
               aria-label="Toggle menu"
@@ -158,6 +162,7 @@ export function Header({ onContactClick }: HeaderProps) {
               {navItems.map((item) => (
                 <button
                   key={item.href}
+                  type="button"
                   onClick={() => handleNavClick(item.href)}
                   className="text-left text-foreground/80 hover:text-foreground transition-colors font-medium py-2"
                 >
