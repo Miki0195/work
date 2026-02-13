@@ -46,12 +46,12 @@ export function Pricing({ onContactClick }: PricingProps) {
             transition={{ delay: index * 0.2 }}
             whileHover={{ y: -8 }}
             className={`relative glass rounded-3xl p-8 space-y-8 ${
-              plan.popular
+              'popular' in plan && plan.popular
                 ? 'ring-2 ring-primary shadow-2xl shadow-primary/20 scale-105'
                 : ''
             }`}
           >
-            {plan.popular && (
+            {'popular' in plan && plan.popular && (
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold">
                 {t.pricing.plans[1].cta}
               </div>
