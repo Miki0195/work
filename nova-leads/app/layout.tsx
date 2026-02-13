@@ -82,11 +82,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="hu" className="scroll-smooth">
-      <head>
+      <body className={`${inter.variable} ${calSans.variable} font-sans antialiased bg-dark-950 text-dark-50`}>
         <OrganizationSchema />
         <LocalBusinessSchema />
-      </head>
-      <body className={`${inter.variable} ${calSans.variable} font-sans antialiased bg-dark-950 text-dark-50`}>
         <Navbar />
         <main className="min-h-screen">
           {children}
