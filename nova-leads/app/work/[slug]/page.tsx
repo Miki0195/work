@@ -151,7 +151,7 @@ export default function CaseStudyDetailPage({ params }: Props) {
             <Quote className="absolute top-8 left-8 text-primary-500/20" size={48} />
             <div className="relative z-10">
               <p className="text-xl text-dark-200 leading-relaxed mb-8 italic">
-                "{study.testimonial.quote}"
+                &ldquo;{study.testimonial.quote}&rdquo;
               </p>
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white font-bold">

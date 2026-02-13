@@ -21,7 +21,7 @@ export default function PrivacyPage() {
                 1. Bevezetés
               </h2>
               <p className="text-dark-300 leading-relaxed">
-                A Nova Leads ("mi", "minket", "miénk") elkötelezett az Ön személyes adatainak védelme iránt. 
+                A Nova Leads (&ldquo;mi&rdquo;, &ldquo;minket&rdquo;, &ldquo;miénk&rdquo;) elkötelezett az Ön személyes adatainak védelme iránt. 
                 Ez az adatvédelmi szabályzat leírja, hogyan gyűjtjük, használjuk és védjük az Ön adatait 
                 a szolgáltatásaink használata során.
               </p>
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
               <ul className="list-disc list-inside text-dark-300 space-y-2">
                 <li>Hozzáférni a személyes adataihoz</li>
                 <li>Helyesbíteni a pontatlan adatokat</li>
-                <li>Töröltetni az adatokat ("elfeledtetéshez való jog")</li>
+                <li>Töröltetni az adatokat (&ldquo;elfeledtetéshez való jog&rdquo;)</li>
                 <li>Korlátozni az adatkezelést</li>
                 <li>Adathordozhatóság</li>
                 <li>Tiltakozni az adatkezelés ellen</li>
