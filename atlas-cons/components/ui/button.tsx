@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, forwardRef } from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onDrag' | 'onDragStart' | 'onDragEnd'> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
   size?: 'sm' | 'md' | 'lg'
   isLoading?: boolean
@@ -26,6 +26,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <motion.button
         ref={ref}
+        type="button"
         className={cn(
           'inline-flex items-center justify-center rounded-lg font-medium transition-colors',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
