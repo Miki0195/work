@@ -1,3 +1,5 @@
+import { ReadonlyURLSearchParams } from 'next/navigation';
+
 export type VariantType = 'a' | 'b';
 
 export interface VariantConfig {
