@@ -1,0 +1,8 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin routes if any
+# Disallow: /admin
+
+Sitemap: https://atlascons.com/sitemap.xml
