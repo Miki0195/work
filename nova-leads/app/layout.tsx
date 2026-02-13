@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -10,13 +9,6 @@ import { SITE_CONFIG } from "@/lib/constants";
 const inter = Inter({ 
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
-});
-
-const calSans = localFont({
-  src: "./fonts/CalSans-SemiBold.woff2",
-  variable: "--font-cal",
-  weight: "600",
   display: "swap",
 });
 
@@ -81,7 +73,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="hu" className="scroll-smooth">
-      <body className={`${inter.variable} ${calSans.variable} font-sans antialiased bg-dark-950 text-dark-50`}>
+      <body className={`${inter.variable} font-sans antialiased bg-dark-950 text-dark-50`}>
         <Navbar />
         <main className="min-h-screen">
           {children}
