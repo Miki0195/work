@@ -25,7 +25,7 @@ export const variantConfigs: Record<VariantType, VariantConfig> = {
   },
 };
 
-export function getVariant(searchParams: URLSearchParams | string): VariantType {
+export function getVariant(searchParams: URLSearchParams | ReadonlyURLSearchParams | string): VariantType {
   const params = typeof searchParams === 'string' ? new URLSearchParams(searchParams) : searchParams;
   const variant = params.get('v');
   return variant === 'b' ? 'b' : 'a';
