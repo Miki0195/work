@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Home, ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
@@ -32,11 +31,12 @@ export default function NotFound() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4"
         >
-          <Link href="/">
-            <Button size="lg" className="group">
-              <Home className="mr-2" size={20} />
-              Vissza a kezdőlapra
-            </Button>
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-lg font-medium transition-all duration-200 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40"
+          >
+            <Home className="mr-2" size={20} />
+            Vissza a kezdőlapra
           </Link>
           <button
             onClick={() => window.history.back()}
