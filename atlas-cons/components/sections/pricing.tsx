@@ -83,7 +83,7 @@ export function Pricing({ onContactClick }: PricingProps) {
                 analytics.ctaClick(`pricing_${plan.name.toLowerCase()}`, 'pricing')
                 analytics.pricingView(plan.name)
               }}
-              variant={plan.popular ? 'primary' : 'outline'}
+              variant={'popular' in plan && plan.popular ? 'primary' : 'outline'}
               className="w-full"
               size="lg"
             >
