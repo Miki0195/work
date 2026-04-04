@@ -172,7 +172,7 @@ export default function VendorPage() {
                 {[...Array(6)].map((_, i) => (
                   <div
                     key={i}
-                    className="aspect-[4/3] bg-gradient-to-br from-ivory-dark to-rose/5 border border-charcoal/5 flex items-center justify-center"
+                    className="aspect-[4/3] bg-gradient-to-br from-ivory-dark via-peach/5 to-rose/8 border border-gold/8 flex items-center justify-center"
                   >
                     <span className="font-serif text-lg text-charcoal/10">
                       {vendor.category}

@@ -1,79 +1,78 @@
 import SectionTitle from '../ui/SectionTitle';
 import RevealWrapper from '../ui/RevealWrapper';
 
-const GALLERY_ITEMS = [
-  { label: 'Ceremónia', span: 'col-span-2 row-span-2', aspect: 'aspect-square' },
-  { label: 'Elegancia', span: 'col-span-1 row-span-1', aspect: 'aspect-square' },
-  { label: 'Buli', span: 'col-span-1 row-span-1', aspect: 'aspect-square' },
-  { label: 'Hangulat', span: 'col-span-1 row-span-1', aspect: 'aspect-[4/3]' },
-  { label: 'Közösség', span: 'col-span-1 row-span-1', aspect: 'aspect-[4/3]' },
-  { label: 'Romantika', span: 'col-span-2 row-span-1', aspect: 'aspect-[21/9]' },
-  { label: 'Ünnep', span: 'col-span-1 row-span-1', aspect: 'aspect-square' },
-  { label: 'Mozgás', span: 'col-span-1 row-span-1', aspect: 'aspect-square' },
+const SOCIAL_PLATFORMS = [
+  { label: 'Instagram', icon: '📸', handle: '@gyorieskuvoparty' },
+  { label: 'Facebook', icon: '💒', handle: 'Győri Esküvő Party' },
+  { label: 'TikTok', icon: '🎬', handle: '@gyorieskuvoparty' },
 ];
-
-const CATEGORY_TABS = ['Fotók', 'Videók', 'Hangulat'];
 
 export default function GallerySection() {
   return (
-    <section id="galeria" className="section-padding bg-white">
+    <section id="social" className="section-padding bg-ivory">
       <div className="section-container">
+        <div className="flex justify-center mb-6">
+          <img
+            src="/icons/wedding-photography.png"
+            alt=""
+            className="wedding-icon w-12 h-12 md:w-14 md:h-14 opacity-50"
+          />
+        </div>
+
         <SectionTitle
-          title="Galéria"
-          subtitle="Pillanatok, amelyek megmutatják az élmény valódi hangulatát."
+          title="Nézz bele az esemény világába"
+          subtitle="A legfrissebb tartalmakat és pillanatokat közösségi felületeinken találod."
         />
 
-        {/* Category tabs */}
+        {/* Social platform cards */}
         <RevealWrapper>
-          <div className="flex items-center justify-center gap-8 mb-12">
-            {CATEGORY_TABS.map((tab, i) => (
-              <button
-                key={tab}
-                className={`text-xs uppercase tracking-[0.2em] font-sans font-medium transition-colors duration-300 pb-2 border-b ${
-                  i === 0
-                    ? 'text-gold border-gold'
-                    : 'text-charcoal-lighter border-transparent hover:text-charcoal hover:border-charcoal/20'
-                }`}
+          <div className="grid sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto mb-12">
+            {SOCIAL_PLATFORMS.map((platform) => (
+              <a
+                key={platform.label}
+                href="#"
+                className="group block border border-gold/15 bg-gradient-to-b from-white to-peach/5 p-6 md:p-8 text-center transition-all duration-300 hover:border-gold/40 hover:shadow-md hover:shadow-gold/5"
               >
-                {tab}
-              </button>
+                <span className="block text-3xl mb-3">{platform.icon}</span>
+                <span className="block font-serif text-lg md:text-xl text-charcoal group-hover:text-gold transition-colors duration-300 mb-1">
+                  {platform.label}
+                </span>
+                <span className="block text-xs text-charcoal-lighter font-sans">
+                  {platform.handle}
+                </span>
+              </a>
             ))}
           </div>
         </RevealWrapper>
 
-        {/* Gallery grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-          {GALLERY_ITEMS.map((item, i) => (
-            <RevealWrapper
-              key={item.label}
-              delay={i * 60}
-              className={item.span}
-            >
+        {/* Social feed placeholder grid */}
+        <RevealWrapper delay={100}>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto">
+            {[...Array(8)].map((_, i) => (
               <div
-                className={`group relative ${item.aspect} bg-gradient-to-br from-ivory-dark to-rose/10 border border-charcoal/5 overflow-hidden cursor-pointer transition-all duration-500 hover:border-gold/30 hover:shadow-lg hover:shadow-gold/5`}
+                key={i}
+                className="group relative aspect-square bg-gradient-to-br from-ivory-dark via-peach/8 to-rose/10 border border-gold/8 overflow-hidden cursor-pointer transition-all duration-500 hover:border-gold/30 hover:shadow-md"
               >
-                {/* Placeholder visual */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <span className="font-serif text-xl md:text-2xl text-charcoal/15 group-hover:text-charcoal/25 transition-colors duration-500">
-                      {item.label}
+                    <span className="block text-2xl mb-2 opacity-30 group-hover:opacity-50 transition-opacity duration-300">
+                      {['📸', '🎶', '💐', '🥂', '💒', '🎂', '💃', '✨'][i]}
+                    </span>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-charcoal/20 font-sans">
+                      Hamarosan
                     </span>
                   </div>
                 </div>
-
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/10 transition-all duration-500" />
-
-                {/* Bottom label on hover */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-charcoal/80 font-sans font-medium bg-ivory/90 backdrop-blur-sm px-3 py-1.5 inline-block">
-                    {item.label}
-                  </span>
-                </div>
               </div>
-            </RevealWrapper>
-          ))}
-        </div>
+            ))}
+          </div>
+        </RevealWrapper>
+
+        <RevealWrapper delay={200}>
+          <p className="text-center text-sm text-charcoal-lighter mt-8 max-w-md mx-auto italic">
+            A közösségi felületeinken hamarosan megjelennek az esemény pillanatai.
+          </p>
+        </RevealWrapper>
       </div>
     </section>
   );

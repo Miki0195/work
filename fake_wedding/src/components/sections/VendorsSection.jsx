@@ -23,7 +23,7 @@ function VendorRow({ vendor, index }) {
             {vendor.category}
           </h3>
 
-          {/* Accent text — slides in from right on hover */}
+          {/* Accent text */}
           <span className="hidden sm:block text-xs md:text-sm text-ivory/0 group-hover:text-ivory/45 font-sans italic max-w-[200px] md:max-w-xs text-right transition-all duration-500 translate-x-4 group-hover:translate-x-0">
             {vendor.accent}
           </span>
@@ -34,7 +34,6 @@ function VendorRow({ vendor, index }) {
           </span>
         </div>
 
-        {/* Animated gold underline */}
         <div className="absolute bottom-0 left-0 h-px bg-gold/50 w-0 group-hover:w-full transition-all duration-700 ease-out" />
       </Link>
     </RevealWrapper>
@@ -45,9 +44,18 @@ export default function VendorsSection() {
   return (
     <section id="szolgaltatok" className="section-padding bg-charcoal">
       <div className="section-container">
+        <div className="flex justify-center mb-6">
+          <img
+            src="/icons/apple.png"
+            alt=""
+            className="w-12 h-12 md:w-14 md:h-14 opacity-40 select-none pointer-events-none"
+            style={{ filter: 'brightness(1.8) grayscale(0.2)' }}
+          />
+        </div>
+
         <SectionTitle
-          title="Szolgáltatók"
-          subtitle="Valódi esküvői szolgáltatókkal dolgozunk együtt, hogy az élmény ne csak inspiráló, hanem hiteles is legyen."
+          title="Akik megalkotják az estét"
+          subtitle="Az esemény mögött olyan szakemberek állnak, akik a saját területükön is a legmagasabb színvonalat képviselik. Együtt dolgoznak azon, hogy ez az este minden részletében egységes és emlékezetes legyen."
           light
         />
 

@@ -3,13 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import Button from '../ui/Button';
 
 const NAV_ITEMS = [
-  { label: 'Főoldal', hash: '#fooldal' },
+  { label: 'Koncepció', hash: '#koncepcio' },
   { label: 'Élmény', hash: '#elmeny' },
-  { label: 'Hogyan működik', hash: '#hogyan-mukodik' },
-  { label: 'Kiknek szól', hash: '#kiknek-szol' },
-  { label: 'Szolgáltatók', hash: '#szolgaltatok' },
   { label: 'Események', hash: '#esemenyek' },
-  { label: 'Galéria', hash: '#galeria' },
+  { label: 'Szolgáltatók', hash: '#szolgaltatok' },
+  { label: 'Social', hash: '#social' },
   { label: 'Kapcsolat', hash: '#kapcsolat' },
 ];
 
@@ -62,7 +60,7 @@ export default function Header() {
         Győri Esküvő Party
       </span>
       <span className="text-[10px] uppercase tracking-[0.25em] text-charcoal-lighter font-sans mt-0.5">
-        Fake Wedding Experience
+        Fake Wedding
       </span>
     </>
   );

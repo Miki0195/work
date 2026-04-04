@@ -9,11 +9,19 @@ export default function ContactSection() {
 
         <RevealWrapper>
           <div className="max-w-lg mx-auto text-center">
-            <p className="text-base md:text-lg text-charcoal-lighter leading-relaxed mb-8">
-              Kérdésed van az eseménnyel kapcsolatban? Szeretnél többet
-              megtudni, vagy egyedi igényed lenne? Vedd fel velünk a
-              kapcsolatot.
+            <p className="text-base md:text-lg text-charcoal-light leading-relaxed mb-4">
+              Ha kérdésed van, vagy szeretnél többet megtudni,
+              <br className="hidden sm:block" />
+              keress minket bizalommal.
             </p>
+
+            <div className="flex justify-center mb-5">
+              <img
+                src="/icons/email.png"
+                alt=""
+                className="wedding-icon w-10 h-10 md:w-12 md:h-12 opacity-50"
+              />
+            </div>
 
             <div className="inline-flex items-center gap-3 mb-6">
               <span className="block w-6 h-px bg-gold" />

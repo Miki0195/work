@@ -8,18 +8,23 @@ export default {
     extend: {
       colors: {
         gold: {
-          DEFAULT: '#D4AF7A',
-          light: '#E2C89B',
-          dark: '#B8944A',
+          DEFAULT: '#C08878',
+          light: '#D4A49A',
+          dark: '#A06858',
         },
         ivory: {
-          DEFAULT: '#F6F3EF',
-          dark: '#EDE8E0',
+          DEFAULT: '#F8F5F1',
+          dark: '#F0EBE4',
         },
         rose: {
-          DEFAULT: '#CFA4A4',
+          DEFAULT: '#C9A0A0',
           light: '#DBBCBC',
-          dark: '#B88E8E',
+          dark: '#B08585',
+        },
+        peach: {
+          DEFAULT: '#F0C9A8',
+          light: '#F5D8C2',
+          dark: '#D9A880',
         },
         charcoal: {
           DEFAULT: '#2B2B2B',

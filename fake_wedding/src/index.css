@@ -17,7 +17,7 @@
   }
 
   ::selection {
-    @apply bg-gold/30 text-charcoal;
+    @apply bg-peach/40 text-charcoal;
   }
 }
 
@@ -32,6 +32,11 @@
 
   .gold-divider {
     @apply mx-auto h-px w-16 bg-gold/60;
+  }
+
+  .wedding-icon {
+    @apply select-none pointer-events-none;
+    filter: sepia(0.15) saturate(0.85) brightness(0.95);
   }
 }
 

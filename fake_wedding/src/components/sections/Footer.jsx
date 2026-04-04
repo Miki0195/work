@@ -1,8 +1,9 @@
 const NAV_LINKS = [
-  { label: 'Főoldal', href: '#fooldal' },
+  { label: 'Koncepció', href: '#koncepcio' },
   { label: 'Élmény', href: '#elmeny' },
   { label: 'Események', href: '#esemenyek' },
-  { label: 'Galéria', href: '#galeria' },
+  { label: 'Szolgáltatók', href: '#szolgaltatok' },
+  { label: 'Social', href: '#social' },
   { label: 'Kapcsolat', href: '#kapcsolat' },
 ];
 
@@ -18,7 +19,7 @@ export default function Footer() {
                 Győri Esküvő Party
               </span>
               <span className="block text-[10px] uppercase tracking-[0.25em] text-ivory/40 font-sans mt-1">
-                Fake Wedding Experience
+                Fake Wedding
               </span>
             </a>
             <p className="text-sm text-ivory/50 leading-relaxed mt-4 max-w-xs">
@@ -66,9 +67,17 @@ export default function Footer() {
               © {new Date().getFullYear()} Győri Esküvő Party. Minden jog
               fenntartva.
             </p>
-            <p className="text-xs text-ivory/20 italic font-serif">
-              Ahol az ünnep mindenkié.
-            </p>
+            <div className="flex items-center gap-3">
+              <img
+                src="/icons/cheers.png"
+                alt=""
+                className="w-5 h-5 opacity-25 select-none pointer-events-none"
+                style={{ filter: 'brightness(2) grayscale(0.3)' }}
+              />
+              <p className="text-xs text-ivory/20 italic font-serif">
+                Ahol az ünnep mindenkié.
+              </p>
+            </div>
           </div>
         </div>
       </div>
