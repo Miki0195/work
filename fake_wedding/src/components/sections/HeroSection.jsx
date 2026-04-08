@@ -26,7 +26,7 @@ export default function HeroSection() {
           }`}
         >
           <img
-            src="/hero-banner.png"
+            src="/hero_banner.png"
             alt="Győri Esküvő Party — Hamis esküvő, Igazi élmény"
             className="w-full max-w-4xl mx-auto rounded-sm"
             draggable={false}

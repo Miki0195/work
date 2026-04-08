@@ -18,10 +18,17 @@ function VendorRow({ vendor, index }) {
             {num}
           </span>
 
-          {/* Category name */}
-          <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl text-ivory/80 group-hover:text-ivory transition-colors duration-500 flex-1">
-            {vendor.category}
-          </h3>
+          {/* Category + vendor name */}
+          <div className="flex-1">
+            <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl text-ivory/80 group-hover:text-ivory transition-colors duration-500">
+              {vendor.category}
+            </h3>
+            {vendor.name && (
+              <p className="text-xs md:text-sm text-ivory/30 font-sans mt-1 group-hover:text-gold/60 transition-colors duration-500">
+                {vendor.name}
+              </p>
+            )}
+          </div>
 
           {/* Accent text */}
           <span className="hidden sm:block text-xs md:text-sm text-ivory/0 group-hover:text-ivory/45 font-sans italic max-w-[200px] md:max-w-xs text-right transition-all duration-500 translate-x-4 group-hover:translate-x-0">
