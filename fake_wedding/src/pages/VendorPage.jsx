@@ -195,7 +195,7 @@ export default function VendorPage() {
       </section>
 
       {/* ── Description ──────────────────────────────────── */}
-      <section className="section-padding bg-ivory">
+      <section className="section-padding bg-white">
         <div className="section-container">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-20">
             {/* Main text */}
@@ -243,7 +243,7 @@ export default function VendorPage() {
         </div>
       </section>
 
-      {/* ── Gallery ──────────────────────────────────────── */}
+      {/* ── Gallery ────────────────────────────────────────
       {vendor.galleryImages.length > 0 && (
         <section className="section-padding bg-white">
           <div className="section-container">
@@ -270,7 +270,7 @@ export default function VendorPage() {
         </section>
       )}
 
-      {/* ── Gallery placeholder (when no images yet) ───── */}
+      ── Gallery placeholder (when no images yet)
       {vendor.galleryImages.length === 0 && (
         <section className="py-16 md:py-20 bg-white">
           <div className="section-container">
@@ -290,7 +290,7 @@ export default function VendorPage() {
             </RevealWrapper>
           </div>
         </section>
-      )}
+      )} */}
 
       {/* ── Contact + Socials ──────────────────────────────── */}
       {vendor.contact && (

@@ -100,6 +100,33 @@ const vendors = [
     },
   },
   {
+    slug: 'videos',
+    category: 'Videós',
+    name: 'NoOff Studio',
+    accent: 'A pillanatok mozgóképes megörökítője.',
+    tagline: 'Mozgásban az emlék, örökre megőrizve.',
+    description: [
+      'A NoOff Studio filmes szemlélettel örökíti meg az esküvő legszebb és legőszintébb pillanatait. A meghitt tekintetektől a felszabadult ünneplésig minden momentumot úgy rögzítenek, hogy az ne csupán felvétel legyen, hanem újra átélhető emlék.',
+      'Professzionális technikával, kreatív látásmóddal és diszkrét jelenléttel dolgoznak, hogy a nap története természetesen, mégis látványosan keljen életre a filmeken keresztül.',
+    ],
+    highlights: [
+      'Filmes látásmód',
+      'Érzelmes pillanatok',
+      'Professzionális technika',
+      'Újra átélhető emlékek',
+    ],
+    coverImage: null,
+    galleryImages: [],
+    contact: {
+      name: 'NoOff Studio',
+      role: 'Videós',
+    },
+    socials: {
+      instagram: 'https://www.instagram.com/nooff_studio?igsh=MTd6ajUyNmlkMnV1NA==',
+      website: 'https://nooff-studio.com',
+    },
+  },
+  {
     slug: 'sminkes',
     category: 'Sminkes',
     name: 'HD BeautyLand',
