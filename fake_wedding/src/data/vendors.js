@@ -33,7 +33,7 @@ const vendors = [
       'Professzionális kiszolgálás',
       'Központi elhelyezkedés',
     ],
-    coverImage: '/vendors/kristaly_etterem/kristaly_cover.jpg',
+    coverImage: '/vendors/kristaly_etterem/kristaly_etterem_cover.jpg',
     galleryImages: [],
     contact: {
       name: 'Kristály Étterem',
@@ -61,7 +61,7 @@ const vendors = [
       'Személyre szabott playlist',
       'Esküvői rutin',
     ],
-    coverImage: null,
+    coverImage: '/vendors/dj_erno/dj_erno_cover.jpg',
     galleryImages: [],
     contact: {
       name: 'DJ Ernő',
@@ -142,7 +142,7 @@ const vendors = [
       'Természetes elegancia',
       'Személyre szabott look',
     ],
-    coverImage: null,
+    coverImage: '/vendors/beautyland/beautyland_cover.jpg',
     galleryImages: [],
     contact: {
       name: 'HD BeautyLand',
@@ -154,8 +154,8 @@ const vendors = [
     },
   },
   {
-    slug: 'dekor',
-    category: 'Dekor',
+    slug: 'latvanyeffekt',
+    category: 'Látványeffekt',
     name: 'Devomax',
     accent: 'A vizuális élmény megteremtője.',
     tagline: 'Ahol a részletek mesélnek.',
@@ -169,7 +169,7 @@ const vendors = [
       'Fénydekoráció',
       'Összehangolt részletek',
     ],
-    coverImage: null,
+    coverImage: '/vendors/devomax/devomax_cover.png',
     galleryImages: [],
     contact: {
       name: 'Devomax',
@@ -196,7 +196,7 @@ const vendors = [
       'Személyes megközelítés',
       'Megható ceremóniák',
     ],
-    coverImage: null,
+    coverImage: '/vendors/mate_livia/mate_livia_cover.jpg',
     galleryImages: [],
     contact: {
       name: 'Máté Lívia',
