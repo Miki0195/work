@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const NAV_LINKS = [
   { label: 'Koncepció', href: '#koncepcio' },
   { label: 'Élmény', href: '#elmeny' },
@@ -67,6 +69,24 @@ export default function Footer() {
               © {new Date().getFullYear()} Győri Esküvő Party. Minden jog
               fenntartva.
             </p>
+
+            {/* Legal links */}
+            <div className="flex items-center gap-4">
+              <Link
+                to="/impresszum"
+                className="text-xs text-ivory/30 hover:text-gold transition-colors duration-300"
+              >
+                Impresszum
+              </Link>
+              <span className="text-ivory/15">|</span>
+              <Link
+                to="/adatvedelmi-tajekoztato"
+                className="text-xs text-ivory/30 hover:text-gold transition-colors duration-300"
+              >
+                Adatvédelem
+              </Link>
+            </div>
+
             <div className="flex items-center gap-3">
               <img
                 src="/icons/cheers.png"
